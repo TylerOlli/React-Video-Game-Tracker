@@ -7,6 +7,7 @@ class Form extends Component {
       firstName: "",
       lastName: "",
       username: "",
+      gamesPlayed: "",
     },
     userExists: false,
   };
@@ -52,7 +53,7 @@ class Form extends Component {
   };
 
   render() {
-    const { firstName, lastName, username } = this.state.user;
+    const { firstName, lastName, username, gamesPlayed } = this.state.user;
 
     return (
       <div className='user-container'>
@@ -77,6 +78,13 @@ class Form extends Component {
             name='username'
             placeholder='Enter Username'
             value={username}
+            onChange={this.handleInputChange}
+          />
+          <input
+            type='number'
+            name='gamesPlayed'
+            placeholder='# of Games Played'
+            value={gamesPlayed}
             onChange={this.handleInputChange}
           />
           <button disabled={this.isDisabled()}>Add User</button>

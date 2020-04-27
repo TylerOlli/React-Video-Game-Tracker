@@ -7,7 +7,7 @@ const User = (props) => {
       <p>Username: {props.user.username}</p>
       <p>
         Number of Games Played:{" "}
-        {props.showGamesPlayed ? props.user.numGamesPlayed : "*"}
+        {props.showGamesPlayed ? props.user.gamesPlayed : "*"}
       </p>
     </li>
   );

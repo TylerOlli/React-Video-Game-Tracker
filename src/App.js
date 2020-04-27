@@ -29,7 +29,7 @@ class App extends Component {
       <div className='App'>
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
-          <h1 className='App-title'>ReactND - Coding Practice</h1>
+          <h1 className='App-title'>React Video Game Tracker</h1>
         </header>
         <Form users={this.state.users} onAddUser={this.createContact} />
         <UserList users={this.state.users} />

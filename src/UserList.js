@@ -20,14 +20,14 @@ class UserList extends Component {
     const gamesPlayedButton = (
       <div className='button-container'>
         <button className='smallButton' onClick={this.toggleGamesPlayedPanel}>
-          {showGamesPlayed ? "Hide " : "Show "} the Number of Games Played
+          {showGamesPlayed ? "Hide " : "Show "} # of Games Played
         </button>
       </div>
     );
 
     return (
       <div className='users-container'>
-      <h1>Users</h1>
+        {users && users.length > 0 ? <h1>Users</h1> : ""}
         {users && users.length > 0 ? gamesPlayedButton : ""}
         <ol className='user-list'>
           {users.map((user) => (
@@ -35,6 +35,7 @@ class UserList extends Component {
               key={user.username}
               user={user}
               showGamesPlayed={showGamesPlayed}
+              gamesPlayed={user.gamesPlayed}
             />
           ))}
         </ol>
